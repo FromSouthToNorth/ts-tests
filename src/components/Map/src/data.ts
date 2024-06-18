@@ -34,6 +34,26 @@ export const markers: Marker[] = [
     name: '果子沟大桥观景点',
     type: getIconMap('scenery'),
     latLng: { lat: 44.47985, lng: 81.15817 },
+  },
+  {
+    name: '安集海大峡谷',
+    type: getIconMap('scenery'),
+    latLng: { lat: 44.10537, lng: 85.10005 },
+  },
+  {
+    name: '琼库什台',
+    type: getIconMap('scenery'),
+    latLng: { lat: 42.9155, lng: 82.19738 },
+  },
+  {
+    name: '洱海',
+    type: getIconMap('lake'),
+    latLng: { lat: 25.7829, lng: 100.1919 }
+  },
+  {
+    name: '玉龙雪山',
+    type: getIconMap('mountain'),
+    latLng: { lat: 27.09841, lng: 100.17670 }
   }
 ]
 
