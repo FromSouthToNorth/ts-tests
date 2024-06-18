@@ -29,6 +29,11 @@ export const markers: Marker[] = [
     name: '赛里木湖',
     type: getIconMap('lake'),
     latLng: { lat: 44.6084, lng: 81.1812 },
+  },
+  {
+    name: '果子沟大桥观景点',
+    type: getIconMap('scenery'),
+    latLng: { lat: 44.47985, lng: 81.15817 },
   }
 ]
 
