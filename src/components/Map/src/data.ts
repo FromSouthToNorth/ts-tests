@@ -54,6 +54,11 @@ export const markers: Marker[] = [
     name: '玉龙雪山',
     type: getIconMap('mountain'),
     latLng: { lat: 27.09841, lng: 100.17670 }
+  },
+  {
+    name: '冷噶错',
+    type: getIconMap('scenery'),
+    latLng: { lat: 29.65115, lng: 101.68477 }
   }
 ]
 
@@ -69,7 +74,7 @@ export function layersAddTo(map: Map) {
       icon: L.icon({ iconSize: [32, 32], iconUrl: _marker.type })
     }
     const marker = L.marker(_marker.latLng, option).bindTooltip(_marker.name, { permanent: true })
-    markerClusterGroup.addLayer(marker)
+    featureGroup.addLayer(marker)
   })
-  map.fitBounds(markerClusterGroup.getBounds())
+  map.fitBounds(featureGroup.getBounds())
 }
