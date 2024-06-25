@@ -22,43 +22,4 @@
       maxZoom: 27,
     });
   });
-
-  function merge(nums: number[], left: number, mid: number, right: number): void {
-    const tmp = new Array(right - left + 1)
-    let i = left
-    let j = mid + 1
-    let k = 0
-    while (i <= mid && j <= right) {
-      if (nums[i] <= nums[j]) {
-        tmp[k++] = nums[i++]
-      }
-      else {
-        tmp[k++] = nums[j++]
-      }
-    }
-
-    while (i <= mid) {
-      tmp[k++] = nums[i++]
-    }
-
-    while (j <= right) {
-      tmp[k++] = nums[j++]
-    }
-
-    for(k = 0; k < tmp.length; k++) {
-      console.log(left, k);
-      nums[left + k] = tmp[k]
-    }
-  }
-
-  function mergeSort(nums: number[], left: number, right: number): void {
-    if (right <= left) return
-    const mid = Math.floor(left + (right - left) / 2)
-    mergeSort(nums, left, mid)
-    mergeSort(nums, mid + 1, right) 
-    merge(nums, left, mid, right)
-  }
-  const nums: number[] = [5, 2, 3, 1, 1, 4]
-  mergeSort(nums, 0, nums.length - 1)
-  console.log(nums);
 </script>

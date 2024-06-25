@@ -25,6 +25,11 @@
     if (!wrapEl) return;
     const insEditor = new Vditor(wrapEl, {
       mode: 'sv',
+      preview: {
+        hljsl: {
+          style: 'github',
+        },
+      },
       fullscreen: {
         index: 520,
       },
